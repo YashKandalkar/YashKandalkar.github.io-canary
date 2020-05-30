@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'), url(https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+
+body{
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+
+}
+
+#top-canary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6fabfe;
+    font-size: 1.3em;
+    font-family: 'Product Sans';
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: black;
+}
+
+#top-canary>img{
+    width: 150px;
+}
+
+/* NAVBAR */
+.main-nav{
+    display: flex;
+    list-style: none;
+    font-size: 1.3em;
+    margin:0;
+    font-family: 'Product Sans';
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    background-color: black;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav li:hover{
+    background-color: #666;
+    cursor:pointer;
+}
+
+.separator{
+    width: 3px;
+    height: 20px;
+    margin:0 5px;
+    background-color: white;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;    
+    z-index: 99;
+}
+
+.push{
+    margin-left: auto;
+}
+
+ul{
+    padding:0;
+    margin:0;
+    justify-content: center;
+}
+
+li{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+li a{
+    color: #f5f5f6;
+    text-decoration: none;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.container{
+    padding: 30px;
+    /*padding-top: 0;*/
+}
+
+/* SEARCH */
+
+#search-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#search-container>img{
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+}
+
+#search{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Product Sans';
+    font-size: 3em;
+    z-index: 99;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+}
+
+#search-text{
+    margin-bottom: 10px;
+}
+
+#search>input{
+    outline: none;
+    border-radius: 6px;
+    border:none;
+    width: 37vw;
+    height: 30px;
+    text-align: center;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: .3em;
+}
+
+/* ARTISTS */
+#artists-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 15px;
+}
+
+.artists-item{
+    /*width: 90%;*/
+    position: relative;
+}
+
+.main-item{
+    user-select: none;
+    display: flex;
+    /*width: 100%;*/
+    flex-direction: row;
+    background-color: #212121;
+    align-items: center;
+    padding: 15px 10px;
+    padding-left: 25px;
+    border-radius: 6px;
+    position: relative;
+}
+
+.artist-img{
+    
+}
+
+.artist-img>img{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+
+.artist-name{
+    font-family: 'Product Sans';
+    font-size: 1.3em;
+    margin-left: 20px;
+    text-transform: capitalize;
+}
+
+.right-arrow{
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 1.4em;
+    transition: transform 0.1s linear;
+}
+
+.artist-albums{
+    /*min-height: 150px;*/
+    display: none;
+    user-select: none;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+    position: absolute;
+    width: 100%;
+    background-color: #3a3a3a;
+    z-index: 90;
+    padding: 20px;
+    width: calc(100% - 40px);
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    transition: display 0.1s linear;
+}
+
+.album{
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: center;
+    transition: transform 0.1s linear
+}
+
+.album:hover{
+    transform: scale(1.1);
+}
+
+.album>img{
+    width: 90px;
+    height: 90px;
+}
+
+.album-name{
+    font-family: 'Product Sans';
+    font-size: 1em;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.last-artist-item{
+    position: initial !important;
+}
+
+
+.fadeIn{
+    opacity: 1 !important;
+}
+
+.fadeOut{
+    opacity: 0 !important;
+}
+
+
+.title{
+    display: inline-flex;
+    width: 100%;
+    align-items: center;
+}
+
+.title-name{
+    font-size: 2em;
+    font-family: 'Product Sans';
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+hr.rounded{
+    border: 3px solid #fff;
+    margin: 0px 0px 0px 15px;
+    width: 100%;
+    background-color: white;
+}
+
+.filler{
+    /*height: 50px;*/
+}
+
+/* FOOTER */
+
+footer{
+    /*position: fixed;*/
+    bottom: 0;
+    height: 50px;
+    margin-bottom: 0;
+    background-color: #6fabfe;
+    font-size: 1.3em;
+    color: black;
+    padding: 0 30px;
+}
+
+.footer-items{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    list-style: none;
+    font-family: 'Product Sans'; 
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer-items>li{
+    padding: 0;
+}
+
+
+#canary{
+    color: black;
+    width: auto;
+    line-height: 1;
+    font-weight: bold;
+}
+
+.canary-container{
+    align-items: center;
+    /*margin-right: 60px;*/
+}
+
+.canary-icon{
+    width: 11px;
+    height: 11px;
+    clip-path: circle(42.8% at 50% 75%);
+    margin-right: 2px;
+    margin-bottom: -4px;
+}
+
+.canary-img{
+    margin-right: 5px;
+}
+
+.canary-img>img{
+    width: 14px;
+    height: 13px;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+/* MEDIA QUERIES*/
+
+@media only screen and (max-width: 480px){
+    .main-nav{
+        font-size: 0.9em;
+        padding: 0;
+    }
+    .title-name{
+        font-size: 1.5em;
+    }
+    .footer-items{
+        font-size: 0.9em;
+    }
+    #artists-container{
+        grid-template-columns: 1fr;
+    }
+    .artist-albums{
+        position: inherit;
+    }
+}
